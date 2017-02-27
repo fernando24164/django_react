@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DjangoReact</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    {% block css-libraries %}{% endblock css-libraries %}
+  </head>
+  <body>
+    {% include "navigationbar.html" %}
+      <div id="container" class="container-fluid">
+          {% block content %}
+          {% endblock content %}
+      </div>
+  </body>
+  <script src="{% static "js/lib/jquery.min.js" %}" charset="utf-8"></script>
+  <script src="{% static "js/lib/bootstrap.min.js" %}" charset="utf-8"></script>
+  {% block js-libraries %}{% endblock js-libraries %}
+</html>
